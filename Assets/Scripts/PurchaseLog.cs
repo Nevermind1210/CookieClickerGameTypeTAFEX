@@ -9,5 +9,8 @@ public class PurchaseLog : MonoBehaviour
     public void StartAutoClicker()
     {
         AutoClicker.SetActive(true);
+        GlobalCashCounters.cashCount -= GlobalPog.pogValue;
+        GlobalPog.pogValue *= 2;
+        GlobalPog.turnOffButton = true;
     }
 }

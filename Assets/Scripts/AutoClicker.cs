@@ -8,7 +8,6 @@ public class AutoClicker : MonoBehaviour
     public static int ClickIncrease = 1;
     public int InternalIncrease;
 
-    // Update is called once per frame
     void Update()
     {
         InternalIncrease = ClickIncrease;
@@ -22,7 +21,7 @@ public class AutoClicker : MonoBehaviour
     IEnumerator CreateTheClick()
     {
         GlobalCookieCounters.cookieCount += InternalIncrease;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1); // Waiting every second to plus 1 count.
         CreatingClicks = false;
     }
         
