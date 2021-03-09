@@ -14,6 +14,6 @@ public class GlobalCashCounters : MonoBehaviour
     void Update()
     {
         cashInternal = cashCount;
-        cashDisplayCount.GetComponent<TextMeshProUGUI>().text = "Dollerios: " + cashInternal;
+        cashDisplayCount.GetComponent<TextMeshProUGUI>().text = "Komodohypes made: " + cashInternal;
     }
 }

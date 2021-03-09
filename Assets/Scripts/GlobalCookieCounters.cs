@@ -14,6 +14,6 @@ public class GlobalCookieCounters : MonoBehaviour
     void Update()
     {
         cookiesInternal = cookieCount; 
-        cookieDisplayCount.GetComponent<TextMeshProUGUI>().text = "Cookies: " + cookiesInternal;
+        cookieDisplayCount.GetComponent<TextMeshProUGUI>().text = "Pogs in chat: " + cookiesInternal;
     }
 }
