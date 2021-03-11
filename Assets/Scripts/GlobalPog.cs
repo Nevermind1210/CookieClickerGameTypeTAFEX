@@ -25,8 +25,8 @@ public class GlobalPog : MonoBehaviour
     void Update()
     {
         currentPog = GlobalCashCounters.cashCount;
-        fakeText.GetComponent<TextMeshProUGUI>().text = "Bot Spam - $" + pogValue;
-        realText.GetComponent<TextMeshProUGUI>().text = "Bot Spam - $" + pogValue;
+        fakeText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
+        realText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
         if (currentPog >= 25)
         {
             fakeButton.SetActive(false);

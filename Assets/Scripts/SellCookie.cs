@@ -13,7 +13,7 @@ public class SellCookie : MonoBehaviour
     {
         if (GlobalCookieCounters.cookieCount == 0)
         {
-            statusBox.GetComponent<TextMeshProUGUI>().text = "You can't trade no pogs for komonodohype! Make more Pogs!";
+            statusBox.GetComponent<TextMeshProUGUI>().text = "You can't trade no pogs for bits! Make more Pogs!";
             statusBox.GetComponent<Animation>().Play("StatusAnim");
         }
         else
