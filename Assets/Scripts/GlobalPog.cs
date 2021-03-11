@@ -14,6 +14,9 @@ public class GlobalPog : MonoBehaviour
     public int currentPog;
     public static int pogValue = 25;
     public static bool turnOffButton = false;
+    public GameObject pogStats;
+    public static int numberOfPogggers;
+    public static int pogsPerSec;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,7 @@ public class GlobalPog : MonoBehaviour
     void Update()
     {
         currentPog = GlobalCashCounters.cashCount;
+        pogStats.GetComponent<TextMeshProUGUI>().text = "Poggers Spamming:" + numberOfPogggers + " @ " + pogsPerSec + " per second";
         fakeText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
         realText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
         if (currentPog >= 25)

@@ -10,6 +10,7 @@ public class AutoClicker : MonoBehaviour
 
     void Update()
     {
+        ClickIncrease = GlobalPog.pogsPerSec;
         InternalIncrease = ClickIncrease;
         if (CreatingClicks == false)
         {
