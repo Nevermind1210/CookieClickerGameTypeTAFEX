@@ -13,6 +13,8 @@ public class GlobalPog : MonoBehaviour
     public GameObject realButton; // the clickable button.
     public int currentPog;
     public static int bitValue = 3; // this changes the text once launched
+    public static int pogValue = 3;
+
     public static bool turnOffButton = false;
     public GameObject pogStats;
     public static int numberOfPogggers;

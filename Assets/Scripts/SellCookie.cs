@@ -11,14 +11,14 @@ public class SellCookie : MonoBehaviour
 
     public void ClickButton()
     {
-        if (GlobalCookieCounters.cookieCount == 0)
+        if (GlobalPogCounters.pogCount == 0)
         {
             statusBox.GetComponent<TextMeshProUGUI>().text = "You can't trade no pogs for bits! Make more Pogs!";
             statusBox.GetComponent<Animation>().Play("StatusAnim");
         }
         else
         {
-            GlobalCookieCounters.cookieCount -= 1;
+            GlobalPogCounters.pogCount -= 1;
             GlobalCashCounters.cashCount += 1;
         }
     }
