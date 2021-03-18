@@ -10,8 +10,12 @@ public class AutoClicker : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
         ClickIncrease = GlobalPog.pogsPerSec;
         InternalIncrease = ClickIncrease; // will increase when purchases 1 * 2;
+=======
+        InternalIncrease = ClickIncrease;
+>>>>>>> parent of 808f728 (Some progress)
         if (CreatingClicks == false)
         {
             CreatingClicks = true;
