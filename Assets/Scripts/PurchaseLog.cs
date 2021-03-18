@@ -5,12 +5,14 @@ using UnityEngine;
 public class PurchaseLog : MonoBehaviour
 {
     public GameObject AutoClicker;
+    public AudioSource playSound;
 
     public void StartAutoClicker()
     {
+        playSound.Play();
         AutoClicker.SetActive(true);
-        GlobalCashCounters.cashCount -= GlobalPog.pogValue;
-        GlobalPog.pogValue *= 2;
+        GlobalCashCounters.cashCount -= GlobalPog.bitValue;
+        GlobalPog.bitValue *= 2;
         GlobalPog.turnOffButton = true;
         GlobalPog.pogsPerSec += 1;
         GlobalPog.numberOfPogggers += 1;

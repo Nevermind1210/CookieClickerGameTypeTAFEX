@@ -10,18 +10,18 @@ public class AutoClicker : MonoBehaviour
 
     void Update()
     {
-        ClickIncrease = GlobalPog.pogsPerSec;
-        InternalIncrease = ClickIncrease;
+        ClickIncrease = GlobalPog.pogsPerSec; 
+        InternalIncrease = ClickIncrease; // will increase when purchases 1 * 2;
         if (CreatingClicks == false)
         {
             CreatingClicks = true;
-            StartCoroutine(CreateTheClick());
+            StartCoroutine(CreateTheClick()); // Will add every second.
         }
     }
 
     IEnumerator CreateTheClick()
     {
-        GlobalCookieCounters.cookieCount += InternalIncrease;
+        GlobalCookieCounters.cookieCount += InternalIncrease; // as it says.
         yield return new WaitForSeconds(1); // Waiting every second to plus 1 count.
         CreatingClicks = false;
     }
