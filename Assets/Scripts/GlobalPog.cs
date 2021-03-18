@@ -12,7 +12,7 @@ public class GlobalPog : MonoBehaviour
     public GameObject realText;
     public GameObject realButton;
     public int currentPog;
-    public static int pogValue = 25;
+    public static int pogValue = 3;
     public static bool turnOffButton = false;
     public GameObject pogStats;
     public static int numberOfPogggers;
@@ -31,12 +31,11 @@ public class GlobalPog : MonoBehaviour
         pogStats.GetComponent<TextMeshProUGUI>().text = "Poggers Spamming:" + numberOfPogggers + " @ " + pogsPerSec + " per second";
         fakeText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
         realText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
-        if (currentPog >= 25)
+        if (currentPog >= pogValue)
         {
             fakeButton.SetActive(false);
             realButton.SetActive(true);
         }
-
         if (turnOffButton == true)
         {
             realButton.SetActive(false);

@@ -21,7 +21,7 @@ public class AutoClicker : MonoBehaviour
 
     IEnumerator CreateTheClick()
     {
-        GlobalCookieCounters.cookieCount += InternalIncrease;
+        GlobalPogCounters.pogCount += InternalIncrease;
         yield return new WaitForSeconds(1); // Waiting every second to plus 1 count.
         CreatingClicks = false;
     }

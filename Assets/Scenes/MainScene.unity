@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.6832, y: -206.67}
+  m_AnchoredPosition: {x: -6.6832275, y: -206.66998}
   m_SizeDelta: {x: -56.1974, y: -460.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12518972
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 17156420}
   - component: {fileID: 17156419}
   m_Layer: 5
-  m_Name: Text  - Cash Display
+  m_Name: Text  - Bits Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2366,8 +2366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e120740ce240fc74dbc32b67d3af7d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookieDisplayCount: {fileID: 2145689256}
-  cookiesInternal: 0
+  pogDisplayCount: {fileID: 2145689256}
+  poggersInternal: 0
 --- !u!4 &2070342199
 Transform:
   m_ObjectHideFlags: 0
@@ -2413,6 +2413,7 @@ MonoBehaviour:
   realText: {fileID: 1834670569}
   realButton: {fileID: 1549071857}
   currentPog: 0
+  pogStats: {fileID: 794810451}
 --- !u!114 &2070342202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,6 +2431,7 @@ MonoBehaviour:
   realText: {fileID: 1834670569}
   realButton: {fileID: 1549071857}
   currentPog: 0
+  pogStats: {fileID: 794810451}
 --- !u!1 &2145689256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,7 +2444,7 @@ GameObject:
   - component: {fileID: 2145689259}
   - component: {fileID: 2145689258}
   m_Layer: 5
-  m_Name: Text - Cookie Counter
+  m_Name: Text - Pog Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

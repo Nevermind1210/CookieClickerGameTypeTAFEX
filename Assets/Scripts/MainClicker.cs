@@ -8,7 +8,7 @@ public class MainClicker : MonoBehaviour
 
     public void ClickButton()
     {
-        GlobalCookieCounters.cookieCount += 1;
+        GlobalPogCounters.pogCount += 1;
     }
 
 }
