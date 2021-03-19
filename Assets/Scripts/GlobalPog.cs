@@ -13,9 +13,10 @@ public class GlobalPog : MonoBehaviour
     public GameObject realButton; // the clickable button.
     public int currentPog;
     public static int bitValue = 3; // this changes the text once launched
-    public static int pogValue = 3;
-
     public static bool turnOffButton = false;
+    public GameObject pogStats;
+    public static int numberOfPogggers;
+    public static int pogsPerSec;
 
     // Start is called before the first frame update
     void Start()
@@ -27,16 +28,10 @@ public class GlobalPog : MonoBehaviour
     void Update()
     {
         currentPog = GlobalCashCounters.cashCount;
-<<<<<<< HEAD
         pogStats.GetComponent<TextMeshProUGUI>().text = "Poggers Spamming:" + numberOfPogggers + " @ " + pogsPerSec + " per second"; // string manipulation.
         fakeText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + bitValue + " bits";
         realText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + bitValue + " bits";
         if (currentPog >= bitValue)
-=======
-        fakeText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
-        realText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + pogValue + " bits";
-        if (currentPog >= 25)
->>>>>>> parent of 808f728 (Some progress)
         {
             fakeButton.SetActive(false);
             realButton.SetActive(true);

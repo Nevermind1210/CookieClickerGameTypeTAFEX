@@ -14,5 +14,7 @@ public class PurchaseLog : MonoBehaviour
         GlobalCashCounters.cashCount -= GlobalPog.bitValue;
         GlobalPog.bitValue *= 2;
         GlobalPog.turnOffButton = true;
+        GlobalPog.pogsPerSec += 1;
+        GlobalPog.numberOfPogggers += 1;
     }
 }

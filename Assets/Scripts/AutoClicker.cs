@@ -10,12 +10,8 @@ public class AutoClicker : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
-        ClickIncrease = GlobalPog.pogsPerSec;
+        ClickIncrease = GlobalPog.pogsPerSec; 
         InternalIncrease = ClickIncrease; // will increase when purchases 1 * 2;
-=======
-        InternalIncrease = ClickIncrease;
->>>>>>> parent of 808f728 (Some progress)
         if (CreatingClicks == false)
         {
             CreatingClicks = true;
@@ -25,9 +21,9 @@ public class AutoClicker : MonoBehaviour
 
     IEnumerator CreateTheClick()
     {
-        GlobalPogCounters.pogCount += InternalIncrease;
+        GlobalCookieCounters.cookieCount += InternalIncrease; // as it says.
         yield return new WaitForSeconds(1); // Waiting every second to plus 1 count.
         CreatingClicks = false;
     }
-
+        
 }
