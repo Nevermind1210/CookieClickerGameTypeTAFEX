@@ -5,32 +5,31 @@ using UnityEngine.UI; // Access to UI Elements.
 
 using TMPro;
 
-public class GlobalPog : MonoBehaviour
+public class GlobalBits : MonoBehaviour
 {
     public GameObject fakeButton; // to show the effect that the button isn't clickable....
     public GameObject fakeText;
     public GameObject realText;
     public GameObject realButton; // the clickable button.
-    public int currentPog;
+    public int currentBits;
     public static int bitValue = 3; // this changes the text once launched
     public static bool turnOffButton = false;
-    public GameObject pogStats;
-    public static int numberOfPogggers;
-    public static int pogsPerSec;
+    public GameObject bitsStats;
+    public static int numberOfBits;
+    public static int bitsPerSec;
 
     // Update is called once per frame
     void Update()
     {
-        currentPog = GlobalCashCounters.cashCount;
-        pogStats.GetComponent<TextMeshProUGUI>().text = "Poggers Spamming:" + numberOfPogggers + " @ " + pogsPerSec + " per second"; // string manipulation.
-        fakeText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + bitValue + " bits";
-        realText.GetComponent<TextMeshProUGUI>().text = "Bot Spam -" + bitValue + " bits";
-        if (currentPog >= bitValue)
+        currentBits = GlobalCashCounters.cashCount;
+        bitsStats.GetComponent<TextMeshProUGUI>().text = "Bits Donated:" + numberOfBits + " @ " + bitsPerSec + " per second"; // string manipulation.
+        fakeText.GetComponent<TextMeshProUGUI>().text = "Buy Simps -" + bitValue + " bits";
+        realText.GetComponent<TextMeshProUGUI>().text = "Buy Simps -" + bitValue + " bits";
+        if (currentBits >= bitValue)
         {
             fakeButton.SetActive(false);
             realButton.SetActive(true);
         }
-
         if (turnOffButton == true) // as it states
         {
             realButton.SetActive(false);

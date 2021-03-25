@@ -9,6 +9,7 @@ public class SellCookie : MonoBehaviour
     public GameObject textBox;
     public GameObject statusBox;
 
+
     public void ClickButton()
     {
         if (GlobalCookieCounters.cookieCount == 0)
