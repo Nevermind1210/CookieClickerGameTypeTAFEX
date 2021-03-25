@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.6832, y: -206.67}
+  m_AnchoredPosition: {x: -6.6832275, y: -206.66998}
   m_SizeDelta: {x: -56.1974, y: -460.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12518972
@@ -1519,7 +1519,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1303635224}
         m_TargetAssemblyTypeName: PurchaseLog, Assembly-CSharp
-        m_MethodName: StartAutoClicker
+        m_MethodName: StartAutoBits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1971,6 +1971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoClicker: {fileID: 1239888053}
+  AutoBits: {fileID: 2085940496}
   playSound: {fileID: 312609841}
 --- !u!1 &1445000136
 GameObject:
@@ -2121,7 +2122,7 @@ GameObject:
   - component: {fileID: 1517217643}
   - component: {fileID: 1517217642}
   m_Layer: 5
-  m_Name: Button - Buy Simps
+  m_Name: Button - Fake Buy Simps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2193,7 +2194,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1303635224}
         m_TargetAssemblyTypeName: PurchaseLog, Assembly-CSharp
-        m_MethodName: StartAutoClicker
+        m_MethodName: StartAutoBits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3108,9 +3109,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2070342199}
-  - component: {fileID: 2070342198}
   - component: {fileID: 2070342200}
+  - component: {fileID: 2070342198}
   - component: {fileID: 2070342202}
+  - component: {fileID: 2070342201}
   m_Layer: 0
   m_Name: MechanicsObject
   m_TagString: Untagged
@@ -3127,7 +3129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070342197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e120740ce240fc74dbc32b67d3af7d36, type: 3}
+  m_Script: {fileID: 11500000, guid: a32c8efd127b4f241acfe297c54af3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cookieDisplayCount: {fileID: 2145689256}
@@ -3160,6 +3162,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cashDisplayCount: {fileID: 17156418}
   cashInternal: 0
+--- !u!114 &2070342201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070342197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221ce0cc8e33c3e48bffd725b8de7743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fakeButton: {fileID: 1517217640}
+  fakeText: {fileID: 600375725}
+  realText: {fileID: 1445000136}
+  realButton: {fileID: 1107305890}
+  currentBits: 0
+  bitsStats: {fileID: 427979226}
 --- !u!114 &2070342202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3178,6 +3198,51 @@ MonoBehaviour:
   realButton: {fileID: 1549071857}
   currentPog: 0
   pogStats: {fileID: 476026911}
+--- !u!1 &2085940496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085940498}
+  - component: {fileID: 2085940497}
+  m_Layer: 0
+  m_Name: AutoBits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2085940497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085940496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdb3bdf0b72bdd428a6727b7d836f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreatingBits: 0
+  InternalIncrease: 0
+--- !u!4 &2085940498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085940496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 719.69507, y: 289.57025, z: -27.2455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2145689256
 GameObject:
   m_ObjectHideFlags: 0
